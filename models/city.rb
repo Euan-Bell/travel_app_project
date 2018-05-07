@@ -1,9 +1,10 @@
 require_relative('../db/sql_runner')
+require_relative('./country.rb')
 
 
 class City
 
-  attr_reader :id, :city_name, :country_id 
+  attr_reader :id, :city_name, :country_id
 
 def initialize(options)
   @id = options['id'].to_i if options['id']
@@ -11,6 +12,19 @@ def initialize(options)
   @country_id = options['country_id']
 end
 
-
+def save()
+  sql = "INSERT INTO cities
+  (
+    city_name, country_id
+  )
+  VALUES
+  (
+    $1, $2
+  )
+  RETURNING id"
+  values = [@city_name, @country_id]
+  city = SqlRunner.run( sql, values ).first
+  @id = city['id'].to_i
+end
 
 end

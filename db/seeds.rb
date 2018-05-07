@@ -5,29 +5,38 @@ require("pry")
 
 
 country1 = Country.new({
-  'name' => 'Germany'
+  'country_name' => 'Germany'
   })
+country1.save()
+
 country2 = Country.new({
-  'name' => 'Scotland'
+  'country_name' => 'Scotland'
   })
+country2.save()
+
 country3 = Country.new({
-  'name' => 'Hungary'
+  'country_name' => 'Hungary'
   })
+country3.save()
 
 city1 = City.new({
-  'name' => 'Berlin',
+  'city_name' => 'Berlin',
   'country_id' => country1.id
   })
+city1.save(
 
+)
 city2 = City.new({
-  'name' => 'Edinburgh',
+  'city_name' => 'Edinburgh',
   'country_id' => country2.id
   })
+city2.save()
 
 city3 = City.new({
-  'name' => 'Budapest',
+  'city_name' => 'Budapest',
   'country_id' => country3.id
   })
+  city3.save()
 
 
 
