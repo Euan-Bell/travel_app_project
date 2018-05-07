@@ -10,6 +10,20 @@ def initialize(options)
   @country_name = options['country_name']
 end
 
+def save()
+  sql = "INSERT INTO countries
+  (
+    country_name
+  )
+  VALUES
+  (
+    $1
+  )
+  RETURNING id"
+  values = [@country_name]
+  country = SqlRunner.run( sql, values ).first
+  @id = country['id'].to_i
+end
 
 
 end
