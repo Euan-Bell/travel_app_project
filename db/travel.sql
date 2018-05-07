@@ -16,6 +16,6 @@ CREATE TABLE cities (
 
 CREATE TABLE visits (
   id SERIAL4 PRIMARY KEY,
-  city_id SERIAL4 references city(id),
-  country_id SERIAL4 references country(id)
+  city_id SERIAL4 references cities(id),
+  country_id SERIAL4 references countries(id)
 );
