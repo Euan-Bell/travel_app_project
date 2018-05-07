@@ -28,6 +28,12 @@ def save()
   @id = city['id'].to_i
 end
 
+def self.all()
+    sql = "SELECT * FROM cities"
+    results = SqlRunner.run( sql )
+    return results.map { |city| City.new( city ) }
+  end
+
 def self.find( id )
     sql = "SELECT * FROM cities
     WHERE id = $1"
