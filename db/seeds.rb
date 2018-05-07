@@ -33,16 +33,16 @@ city2 = City.new({
 city2.save()
 
 city3 = City.new({
-  'city_name' => 'Budapest',
-  'country_id' => country3.id
+    'city_name' => 'Budapest',
+    'country_id' => country3.id
   })
-  city3.save()
+city3.save()
 
 visit1 = Visit.new({
-  'city_id' => city1.id,
-  'country_id' => country1.id
+    'city_id' => city1.id,
+    'country_id' => country1.id
   })
-    visit1.save()
+visit1.save()
 
 visit2 = Visit.new({
     'city_id' => city2.id,

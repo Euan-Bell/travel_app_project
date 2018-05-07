@@ -41,12 +41,12 @@ class Country
   end
 
   def update()
-  sql = 'UPDATE countries
-  SET country_name = $1
-  WHERE id = $2';
-  values = [@country_name, @id]
-  country = SqlRunner.run(sql, values)
-end
+    sql = 'UPDATE countries
+    SET country_name = $1
+    WHERE id = $2';
+    values = [@country_name, @id]
+    country = SqlRunner.run(sql, values)
+  end
 
 
 

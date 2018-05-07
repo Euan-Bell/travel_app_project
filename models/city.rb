@@ -4,7 +4,8 @@ require_relative('./country.rb')
 
 class City
 
-  attr_reader :id, :city_name, :country_id
+  attr_reader :id, :country_id
+  attr_accessor :city_name
 
 def initialize(options)
   @id = options['id'].to_i if options['id']
@@ -34,5 +35,18 @@ def self.find( id )
     results = SqlRunner.run( sql, values )
     return City.new( results.first )
   end
+
+  def update()
+  sql = 'UPDATE cities
+  SET city_name = $1
+  WHERE id = $2';
+  values = [@city_name, @id]
+  city = SqlRunner.run(sql, values)
+end
+
+def self.delete_all()
+ sql = "DELETE FROM cities"
+ SqlRunner.run(sql)
+end
 
 end
