@@ -18,6 +18,6 @@ CREATE TABLE locations (
 
 CREATE TABLE visits (
   id SERIAL4 PRIMARY KEY,
-  location_id INT4 REFERENCES locations(id),
-  realm_id INT4 REFERENCES realms(id)
+  location_id INT4 REFERENCES locations(id)
+
 );

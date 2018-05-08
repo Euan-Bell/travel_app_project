@@ -4,9 +4,9 @@ require_relative('controllers/location_controller')
 require_relative('controllers/realm_controller')
 require_relative('controllers/visit_controller')
 
-get '/homepage' do
+get '/' do
   "hello world"
-  erb( :"homepage/index" )
+  erb( :index )
 end
 
 
@@ -23,10 +23,10 @@ get '/homepage/tovisit' do
   erb ( :"to_visit/index" )
 end
 
-post '/newjourney' do
+post '/homepage/visited' do
   Location.new(params).save
   Realm.new(params).save
-  redirect to '/students'
+  redirect to ('/homepage/visited')
 end
 
 get '/homepage/new' do
