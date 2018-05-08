@@ -23,5 +23,5 @@ end
 
 post '/realms' do
   @realms = Realm.all
-  erb ( :"realm/show" )
+  redirect to("/realms")
 end
