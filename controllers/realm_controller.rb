@@ -10,7 +10,6 @@ require_relative( '../models/visit.rb' )
 
 
 get '/realms' do
-  @locations = Location.all
   @realms = Realm.all
   erb ( :"realm/index" )
 end
