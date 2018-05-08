@@ -1,0 +1,12 @@
+<h1>Realms</h1>
+
+<table>
+
+  <% for realm in @realms %>
+  <tr>
+    <td><a href="/realms/<%= realms.id %>"><%= realm.realm_name %></a></td>
+    <td>|</td>
+
+  </tr>
+  <% end %>
+</table>

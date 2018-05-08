@@ -17,5 +17,5 @@ end
 
 post '/locations' do
   @locations = Location.all
-  erb ( :"location/new" )
+  redirect to("/locations")
 end

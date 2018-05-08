@@ -8,5 +8,5 @@ require_relative( '../models/visit.rb' )
 get '/visits' do
   @realms = Realm.all
   @locations = Location.all
-  erb ( :"Visit/index" )
+  erb ( :"visit/index" )
 end
