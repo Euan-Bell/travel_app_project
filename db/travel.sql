@@ -1,23 +1,23 @@
 DROP TABLE visits;
-DROP TABLE cities;
-DROP TABLE countries;
+DROP TABLE locations;
+DROP TABLE realms;
 
 
 
 
-CREATE TABLE countries (
+CREATE TABLE realms (
   id SERIAL4 PRIMARY KEY,
-  country_name VARCHAR(255) NOT NULL
+  realm_name VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE cities (
+CREATE TABLE locations (
   id SERIAL4 PRIMARY KEY,
-  city_name VARCHAR(255)NOT NULL,
-  country_id INT4 REFERENCES countries(id)
+  location_name VARCHAR(255)NOT NULL,
+  realm_id INT4 REFERENCES realms(id)
 );
 
 CREATE TABLE visits (
   id SERIAL4 PRIMARY KEY,
-  city_id INT4 REFERENCES cities(id),
-  country_id INT4 REFERENCES countries(id)
+  location_id INT4 REFERENCES locations(id),
+  realm_id INT4 REFERENCES realms(id)
 );

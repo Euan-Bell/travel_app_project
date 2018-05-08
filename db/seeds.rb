@@ -1,58 +1,57 @@
-require_relative( "../models/city.rb" )
-require_relative( "../models/country.rb" )
+require_relative( "../models/location.rb" )
+require_relative( "../models/realm.rb" )
 require_relative( "../models/visit.rb" )
 require("pry")
 
 
-country1 = Country.new({
-  'country_name' => 'Germany'
+realm1 = Realm.new({
+  'realm_name' => 'Niflheim'
   })
-country1.save()
+realm1.save()
 
-country2 = Country.new({
-  'country_name' => 'Scotland'
+realm2 = Realm.new({
+  'realm_name' => 'Muspelheim'
   })
-country2.save()
+realm2.save()
 
-country3 = Country.new({
-  'country_name' => 'Hungary'
+realm3 = Realm.new({
+  'realm_name' => 'Asgard'
   })
-country3.save()
+realm3.save()
 
-city1 = City.new({
-  'city_name' => 'Berlin',
-  'country_id' => country1.id
+location1 = Location.new({
+  'location_name' => 'Hvergelmir',
+  'realm_id' => realm1.id
   })
-city1.save(
+location1.save()
 
-)
-city2 = City.new({
-  'city_name' => 'Edinburgh',
-  'country_id' => country2.id
+location2 = Location.new({
+  'location_name' => 'River of flame',
+  'realm_id' => realm2.id
   })
-city2.save()
+location2.save()
 
-city3 = City.new({
-    'city_name' => 'Budapest',
-    'country_id' => country3.id
+location3 = Location.new({
+    'location_name' => 'Great Hall',
+    'realm_id' => realm3.id
   })
-city3.save()
+location3.save()
 
 visit1 = Visit.new({
-    'city_id' => city1.id,
-    'country_id' => country1.id
+    'location_id' => location1.id,
+    'realm_id' => realm1.id
   })
 visit1.save()
 
 visit2 = Visit.new({
-    'city_id' => city2.id,
-    'country_id' => country2.id
+    'location_id' => location2.id,
+    'realm_id' => realm2.id
     })
       visit2.save()
 
   visit3 = Visit.new({
-    'city_id' => city3.id,
-    'country_id' => country3.id
+    'location_id' => location3.id,
+    'realm_id' => realm3.id
     })
       visit3.save()
 
