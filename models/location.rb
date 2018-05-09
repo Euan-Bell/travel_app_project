@@ -4,8 +4,8 @@ require_relative('./realm.rb')
 
 class Location
 
-  attr_reader :id, :realm_id
-  attr_accessor :location_name
+  attr_reader :id
+  attr_accessor :location_name, :realm_id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']

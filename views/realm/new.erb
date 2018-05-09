@@ -1,46 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Create new Journey</title>
-</head>
+<form method="post" action="/locations">
 
-<body>
+<label for="realm-name">Select a Location:</label>
+<input type=“text” name=location_name id=location_name>
 
-  <!-- <form action="/realms" method="post">
-  <label>
-  Select a Realm:
-    <select name="realm_id">
-      <% for realm in @realms %>
-      <option value="<%= realm.id %>"><%= realm.realm_name %></option>
-      <% end %>
-    </select>
-  </label> -->
 
-  <form method="post" action="/realms">
-
-    <label for="realm-selection">Select a Realm:</label>
-    <select name="realm_name" id="realm_id">
-      <option value="Niflheim">Niflheim</option>
-      <option value="Muspelheim">Muspelheim</option>
-      <option value="Asgard">Asgard</option>
-      <option value="Midgard">Midgard</option>
-      <option value="Jotunheim">Jotunheim</option>
-      <option value="Vanaheim">Vanaheim</option>
-      <option value="Alfheim">Alfheim</option>
-      <option value="Svartalfheim">Svartalfheim</option>
-      <option value="Helheim">Helheim</option>
-    </select>
-
-    <!-- <! <label for="location-selection">Select a Location:</label>
-    <select name="Location" id="realm">
-      <option value="Hvergelmir">Hvergelmir</option>
-      <option value="River of flame">River of flame</option>
-      <option value="Great Hall">Great Hall</option>
-    </select> -->
-    <input type="submit" value="add Realm">
-    <!-- TODO add button -->
-  </form>
-</body>
-
-</html>
+<label> realm:
+  <select name="realm_id" id="realm_id_select">
+    <% for realm in @realms %>
+      <option value=<%= realm.id %>><%= realm.realm_name %></option>
+    <% end %>
+  </select>
+</label>
+<input type="submit" value="add location">
+</form>

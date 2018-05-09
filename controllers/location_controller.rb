@@ -10,21 +10,26 @@ get '/locations' do
   erb ( :"location/index" )
 end
 
-post '/locations/new' do
-  Location.new(params).save
-  redirect to("/locations")
-end
-
 get '/locations/new' do
   @locations = Location.all
+  @realms = Realm.all
   erb ( :"location/new" )
 end
 
 post '/locations' do
-  @location = Location.new(params)
-  @location.save
+  location = Location.new(params)
+  location.save
   redirect to("/locations")
 end
+
+
+
+# post '/locations' do
+#   @location = Location.new(params)
+#   binding.pry
+#   @location.save
+#   redirect to("/locations")
+# end
 
 post '/locations/:id/delete' do
   location = Location.find(params[:id])

@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Create new Journey</title>
-</head>
-
-<body>
 
 
-
-    <!-- <label for="realm-selection">Select a Realm:</label>
-    <select name="Realm" id="realm">
-      <option value="Niflheim">Niflheim</option>
-      <option value="Muspelheim">Muspelheim</option>
-      <option value="Asgard">Asgard</option>
-    </select> -->
     <form method="post" action="/locations">
 
-    <label for="location-selection">Select a Location:</label>
-    <select name="location_id" id="location_id">
-     <% for location in @locations  %>
-       <option value="<%=location.id%>"> <%= location.location_name %></option>
-     <% end %>
+    <label for="location-name">Select a Location:</label>
+    <input type=“text” name=location_name id=location_name>
 
-    </select>
+
+    <label> realm:
+      <select name="realm_id" id="realm_id_select">
+        <% for realm in @realms %>
+          <option value=<%= realm.id %>><%= realm.realm_name %></option>
+        <% end %>
+      </select>
+    </label>
     <input type="submit" value="add location">
-
-
   </form>
-</body>
-
-</html>
