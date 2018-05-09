@@ -7,7 +7,10 @@
   <p>Realm: <%= visit.location.realm.realm_name  %></p>
 </table>
 
+<form action="/visits/<%=visit.id%>/delete" method="POST">
+  <input type="submit" value="delete" />
+</form>
 
 
 
-  <% end %>
+<% end %>

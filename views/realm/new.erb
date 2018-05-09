@@ -1,15 +1,9 @@
-<form method="post" action="/locations">
+<form method="post" action="/realms">
 
-<label for="realm-name">Select a Location:</label>
-<input type=“text” name=location_name id=location_name>
+<label for="realm-name">Select a Realm:</label>
+<input type=“text” name=realm_name id=realm_name>
 
 
-<label> realm:
-  <select name="realm_id" id="realm_id_select">
-    <% for realm in @realms %>
-      <option value=<%= realm.id %>><%= realm.realm_name %></option>
-    <% end %>
-  </select>
-</label>
-<input type="submit" value="add location">
+
+<input type="submit" value="add Realm">
 </form>
