@@ -4,6 +4,13 @@ require_relative( "../models/visit.rb" )
 require("pry")
 
 
+Visit.delete_all()
+Location.delete_all()
+Realm.delete_all()
+
+
+
+
 realm1 = Realm.new({
   'realm_name' => 'Niflheim'
   })
@@ -18,6 +25,36 @@ realm3 = Realm.new({
   'realm_name' => 'Asgard'
   })
 realm3.save()
+
+realm4 = Realm.new({
+  'realm_name' => 'Midgard'
+  })
+realm4.save()
+
+realm5 = Realm.new({
+  'realm_name' => 'Jotunheim'
+  })
+realm5.save()
+
+realm6 = Realm.new({
+  'realm_name' => 'Vanaheim'
+  })
+realm6.save()
+
+realm7 = Realm.new({
+  'realm_name' => 'Alfheim'
+  })
+realm7.save()
+
+realm8 = Realm.new({
+  'realm_name' => 'Svartalfheim'
+  })
+realm8.save()
+
+realm9 = Realm.new({
+  'realm_name' => 'Helheim'
+  })
+realm9.save()
 
 location1 = Location.new({
   'location_name' => 'Hvergelmir',
@@ -54,10 +91,3 @@ visit2 = Visit.new({
     'realm_id' => realm3.id
     })
       visit3.save()
-
-
-
-
-
-binding.pry
-nil

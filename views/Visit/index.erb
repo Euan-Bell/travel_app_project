@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Visted Realms</title>
-    <h1>Visted Realms</h1>
+<h1>Journeys</h1>
 
-  </head>
-  <body>
-    <p>please work</p>
+<table>
 
-  </body>
-</html>
+  <% for realm in @realms %>
+  <tr>
+    <td><a href="/realms/<%= realm.id %>"><%= realm.realm_name %></a></td>
+    <td>|</td>
+
+  </tr>
+  <% end %>
+
+
+  <% for location in @locations %>
+  <tr>
+    <td><a href="/locations/<%= location.id %>"><%= location.location_name %></a></td>
+    <td>|</td>
+
+  </tr>
+  <% end %>
+</table>

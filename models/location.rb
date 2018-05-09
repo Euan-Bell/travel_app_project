@@ -44,7 +44,7 @@ def self.find( id )
 
   def update()
   sql = 'UPDATE locations
-  SET city_name = $1
+  SET location_name = $1
   WHERE id = $2';
   values = [@location_name, @id]
   location = SqlRunner.run(sql, values)
@@ -54,5 +54,7 @@ def self.delete_all()
  sql = "DELETE FROM locations"
  SqlRunner.run(sql)
 end
+
+
 
 end

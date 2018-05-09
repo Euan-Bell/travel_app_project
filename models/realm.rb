@@ -42,7 +42,7 @@ class Realm
 
   def update()
     sql = 'UPDATE realms
-    SET country_name = $1
+    SET realm_name = $1
     WHERE id = $2';
     values = [@realm_name, @id]
     realm = SqlRunner.run(sql, values)

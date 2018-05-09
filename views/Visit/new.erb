@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Create new Journey</title>
+</head>
+
+<body>
+
+
+  <form method="post" action="/visits">
+
+    <label for="realm-selection">Select a Realm:</label>
+    <select name="Realm" id="realm">
+      <option value="Niflheim">Niflheim</option>
+      <option value="Muspelheim">Muspelheim</option>
+      <option value="Asgard">Asgard</option>
+      <option value="Midgard">Midgard</option>
+      <option value="Jotunheim">Jotunheim</option>
+      <option value="Vanaheim">Vanaheim</option>
+      <option value="Alfheim">Alfheim</option>
+      <option value="Svartalfheim">Svartalfheim</option>
+      <option value="Helheim">Helheim</option>
+    </select>
+    <input type="submit" value="add Realm">
+  </form>
+
+  <form method="post" action="/visits">
+    <label for="location-selection">Select a Location:</label>
+    <select name="Location" id="realm">
+      <option value="Hvergelmir">Hvergelmir</option>
+      <option value="River of flame">River of flame</option>
+      <option value="Great Hall">Great Hall</option>
+    </select>
+    <input type="submit" value="add Realm">
+  </form>
+
+  <h1>Journeys</h1>
+
+<table>
+ <tr>
+   <th>Location</th>
+   <th></th>
+   <th>Realm</th>
+ </tr>
+<hr>
+ <tr>
+<td><%=@location.location_name  %></td>
+<td><%=  @location.get_realm_name_by_id%></td>
+<td></td>
+ </tr>
+</table>
+
+
+    <!-- TODO add button -->
+
+  </body>
+
+  </html>

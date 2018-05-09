@@ -10,3 +10,16 @@ get '/visits' do
   @locations = Location.all
   erb ( :"visit/index" )
 end
+
+
+get '/visits/new' do
+  @realms = Realm.all
+  @locations = Location.all
+  erb ( :"visit/new" )
+end
+
+post '/visits' do
+  @locations = Location.all
+  @realms = Realm.all
+  redirect to("/visits")
+end
