@@ -5,7 +5,11 @@
   <p>location: <%=location.location_name%></p>
 </table>
 
+<p><a href="/locations/<%= location.id %>">Show Location</a></p>
+
 <form action="/locations/<%=location.id%>/delete" method="POST">
   <input type="submit" value="delete" />
 </form>
+
+
 <% end %>

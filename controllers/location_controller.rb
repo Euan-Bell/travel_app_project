@@ -23,6 +23,18 @@ post '/locations' do
 end
 
 
+get '/locations/:id/edit' do
+  @location = Location.find(params[:id])
+  erb(:"location/edit")
+end
+
+
+post '/locations/:id/edit' do
+  location= Location.new(params)
+  location.update()
+  redirect '/locations'
+end
+
 
 # post '/locations' do
 #   @location = Location.new(params)

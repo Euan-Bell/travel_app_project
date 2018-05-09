@@ -1,1 +1,12 @@
+<table>
+  <%@locations.each do |location| %>
+  <p>location: <%=location.location_name%></p>
+</table>
 
+<form action="/locations/<%=location.id%>/delete" method="POST">
+  <input type="submit" value="delete" />
+</form>
+
+
+<a href="/locations/<%=location.id%>/edit">update Location</a>
+<% end %>
