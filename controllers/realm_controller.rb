@@ -37,7 +37,7 @@ get '/realms/:id/edit' do
 end
 
 
-post '/realm/:id/edit' do
+post '/realms/:id/edit' do
   realm= Realm.new(params)
   realm.update()
   redirect '/realms'
