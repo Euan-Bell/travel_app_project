@@ -7,10 +7,20 @@
 
 <body>
 
+  <!-- <form action="/realms" method="post">
+  <label>
+  Select a Realm:
+    <select name="realm_id">
+      <% for realm in @realms %>
+      <option value="<%= realm.id %>"><%= realm.realm_name %></option>
+      <% end %>
+    </select>
+  </label> -->
+
   <form method="post" action="/realms">
 
     <label for="realm-selection">Select a Realm:</label>
-    <select name="Realm" id="realm">
+    <select name="realm_name" id="realm_id">
       <option value="Niflheim">Niflheim</option>
       <option value="Muspelheim">Muspelheim</option>
       <option value="Asgard">Asgard</option>
@@ -22,7 +32,7 @@
       <option value="Helheim">Helheim</option>
     </select>
 
-    <!-- <label for="location-selection">Select a Location:</label>
+    <!-- <! <label for="location-selection">Select a Location:</label>
     <select name="Location" id="realm">
       <option value="Hvergelmir">Hvergelmir</option>
       <option value="River of flame">River of flame</option>

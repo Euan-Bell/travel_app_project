@@ -1,12 +1,8 @@
 <h1>Realms</h1>
 
 <table>
+<%@realms.each do |realm| %>
+<p>realm:<%=realm.realm_name%></p>
+<%end%>
 
-  <% for realm in @realms %>
-  <tr>
-    <td><a href="/realms/<%= realm.id %>"><%= realm.realm_name %></a></td>
-    <td>|</td>
-
-  </tr>
-  <% end %>
 </table>

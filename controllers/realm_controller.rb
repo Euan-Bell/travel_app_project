@@ -27,8 +27,6 @@ end
 
 post '/realms' do
   @realm = Realm.new(params)
-
-  binding.pry
   @realm.save
   redirect to("/realms")
 end
