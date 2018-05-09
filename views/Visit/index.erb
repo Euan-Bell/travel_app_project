@@ -1,21 +1,14 @@
 <h1>Journeys</h1>
 
 <table>
+  <%@visits.each do |visit| %>
+  <p>Journey number: <%=visit.id%></p>
+  <p>Realm: <%=visit.realm.realm_name%></p>
+  <p>Location: <%=visit.location.location_name%></p>
 
-  <% for realm in @realms %>
-  <tr>
-    <td><a href="/realms/<%= realm.id %>"><%= realm.realm_name %></a></td>
-    <td>|</td>
 
-  </tr>
+
+
   <% end %>
 
-
-  <% for location in @locations %>
-  <tr>
-    <td><a href="/locations/<%= location.id %>"><%= location.location_name %></a></td>
-    <td>|</td>
-
-  </tr>
-  <% end %>
 </table>

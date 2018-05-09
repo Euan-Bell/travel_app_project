@@ -11,7 +11,7 @@
   <form method="post" action="/visits">
 
     <label for="realm-selection">Select a Realm:</label>
-    <select name="Realm" id="realm">
+    <select name="realm_name" id="realm_id">
       <option value="Niflheim">Niflheim</option>
       <option value="Muspelheim">Muspelheim</option>
       <option value="Asgard">Asgard</option>
@@ -22,38 +22,30 @@
       <option value="Svartalfheim">Svartalfheim</option>
       <option value="Helheim">Helheim</option>
     </select>
-    <input type="submit" value="add Realm">
-  </form>
 
-  <form method="post" action="/visits">
+
+
     <label for="location-selection">Select a Location:</label>
-    <select name="Location" id="realm">
+    <select name="location_name" id="location_id">
       <option value="Hvergelmir">Hvergelmir</option>
       <option value="River of flame">River of flame</option>
       <option value="Great Hall">Great Hall</option>
+      <option value="Bifrost the Rainbow Bridge">Bifrost the Rainbow Bridge</option>
+      <option value="Mimir’s well of wisdom">Mimir’s well of wisdom</option>
+      <option value="The seeing lakes of Vanaheim">The seeing lakes of Vanaheim</option>
+      <option value="Alfheim Sanctuary">Alfheim Sanctuary</option>
+      <option value="The Great Forge">The Great Forge</option>
+      <option value="The Hellway">The Hellway</option>
+
     </select>
-    <input type="submit" value="add Realm">
+    <input type="submit" value="add journey">
   </form>
 
-  <h1>Journeys</h1>
-
-<table>
- <tr>
-   <th>Location</th>
-   <th></th>
-   <th>Realm</th>
- </tr>
-<hr>
- <tr>
-<td><%=@location.location_name  %></td>
-<td><%=  @location.get_realm_name_by_id%></td>
-<td></td>
- </tr>
-</table>
 
 
-    <!-- TODO add button -->
 
-  </body>
 
-  </html>
+
+</body>
+
+</html>

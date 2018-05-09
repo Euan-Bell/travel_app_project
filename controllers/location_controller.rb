@@ -25,3 +25,8 @@ post '/locations' do
   @location.save
   redirect to("/locations")
 end
+
+post '/locations/:id/delete' do
+  Location.delete_all(params[:id])
+  redirect to("/locations")
+end

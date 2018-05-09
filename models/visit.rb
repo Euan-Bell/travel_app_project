@@ -26,12 +26,18 @@ def save()
   @id = visit['id'].to_i
 end
 
+def self.all()
+  sql = "SELECT * FROM visits"
+  results = SqlRunner.run( sql )
+  return results.map { |visit| Visit.new( visit ) }
+end
+
 def self.delete_all()
   sql = "DELETE FROM visits"
   SqlRunner.run(sql)
 end
 
-def self.find( id )
+def self.find(id)
   sql = "SELECT * FROM visits
   WHERE id = $1"
   values = [id]
@@ -39,19 +45,17 @@ def self.find( id )
   return Visit.new( results.first )
 end
 
-def get_realm_name_by_id
-   get_realm_name_by_id = Realm.find(@realm_id)
-   return get_realm_name_by_id
- end
 
 
+# TODO: changeit to use sql
  def location
    location = Location.find(@location_id)
    return location
  end
 
+# TODO: change it to use SQL
  def realm
-   realm = Location.find(@realm_id)
+   realm = Realm.find(location().realm_id)
    return realm
  end
 
