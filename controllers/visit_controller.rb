@@ -6,32 +6,19 @@ require_relative( '../models/location.rb' )
 require_relative( '../models/visit.rb' )
 
 get '/visits' do
-  @realms = Realm.all
-  @locations = Location.all
   @visits = Visit.all
   erb ( :"visit/index" )
 end
 
-
-post '/visits/new' do
-  Realm.new(params).save
-  Location.new(params).save
+post '/visits' do
+  @visit = Visit.new(params)
+  @visit.save()
   redirect to('/visits')
 end
 
 get '/visits/new' do
-  @realms = Realm.all
   @locations = Location.all
-
   erb ( :"visit/new" )
-end
-
-post '/visits' do
-  @location = Location.new(params)
-  @location.save
-  @realm = Realm.new(params)
-  @realm.save
-  redirect to("/visits")
 end
 
 post '/visits/:id/delete' do

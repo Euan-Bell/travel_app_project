@@ -62,6 +62,8 @@ class Location
     SqlRunner.run(sql)
   end
 
-
+  def realm()
+    return Realm.find(@realm_id)
+  end
 
 end

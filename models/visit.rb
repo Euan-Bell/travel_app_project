@@ -8,7 +8,6 @@ class Visit
 def initialize(options)
   @id = options['id'].to_i if options['id']
   @location_id = options['location_id']
-
 end
 
 def save()
@@ -61,11 +60,6 @@ end
    return location
  end
 
-# TODO: change it to use SQL
- def realm
-   realm = Realm.find(location().realm_id)
-   return realm
- end
 
 # def journeys()
 #     sql ="SELECT locations.*, realms.* FROM realms INNER JOIN locations ON realms.id = locations.realm_id INNER JOIN visits

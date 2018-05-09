@@ -3,8 +3,8 @@
 <table>
   <%@visits.each do |visit| %>
   <p>Journey number: <%=visit.id%></p>
-  <p>Realm: <%=visit.realm.realm_name%></p>
   <p>Location: <%=visit.location.location_name%></p>
+  <p>Realm: <%= visit.location.realm.realm_name  %></p>
 </table>
 
 

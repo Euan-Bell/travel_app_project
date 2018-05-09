@@ -10,33 +10,12 @@
 
   <form method="post" action="/visits">
 
-    <label for="realm-selection">Select a Realm:</label>
-    <select name="realm_name" id="realm_id">
-      <option value="Niflheim">Niflheim</option>
-      <option value="Muspelheim">Muspelheim</option>
-      <option value="Asgard">Asgard</option>
-      <option value="Midgard">Midgard</option>
-      <option value="Jotunheim">Jotunheim</option>
-      <option value="Vanaheim">Vanaheim</option>
-      <option value="Alfheim">Alfheim</option>
-      <option value="Svartalfheim">Svartalfheim</option>
-      <option value="Helheim">Helheim</option>
-    </select>
-
-
 
     <label for="location-selection">Select a Location:</label>
-    <select name="location_name" id="location_id">
-      <option value="Hvergelmir">Hvergelmir</option>
-      <option value="River of flame">River of flame</option>
-      <option value="Great Hall">Great Hall</option>
-      <option value="Bifrost the Rainbow Bridge">Bifrost the Rainbow Bridge</option>
-      <option value="Mimir’s well of wisdom">Mimir’s well of wisdom</option>
-      <option value="The seeing lakes of Vanaheim">The seeing lakes of Vanaheim</option>
-      <option value="Alfheim Sanctuary">Alfheim Sanctuary</option>
-      <option value="The Great Forge">The Great Forge</option>
-      <option value="The Hellway">The Hellway</option>
-
+    <select name="location_id" id="location_id">
+      <% for location in @locations  %>
+        <option value="<%=location.id%>"> <%= location.location_name %></option>
+      <% end %>
     </select>
     <input type="submit" value="add journey">
   </form>
