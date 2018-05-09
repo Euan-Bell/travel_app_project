@@ -27,6 +27,7 @@ post '/locations' do
 end
 
 post '/locations/:id/delete' do
-  Location.delete_all(params[:id])
+  location = Location.find(params[:id])
+  location.delete
   redirect to("/locations")
 end
