@@ -30,3 +30,9 @@ post '/realms' do
   @realm.save
   redirect to("/realms")
 end
+
+post '/realms/:id/delete' do
+  realm = Realm.find(params[:id])
+  realm.delete
+  redirect to("/realms")
+end
