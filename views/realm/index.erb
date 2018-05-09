@@ -5,6 +5,8 @@
   <p>realm:<%=realm.realm_name%></p>
 </table>
 
+<p><a href="/realms/<%= realm.id %>">Edit Realm</a></p>
+
 <form action="/realms/<%=realm.id%>/delete" method="POST">
   <input type="submit" value="delete" />
 </form>

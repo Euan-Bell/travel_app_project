@@ -31,6 +31,18 @@ post '/realms' do
   redirect to("/realms")
 end
 
+get '/realms/:id/edit' do
+  @realm = Realm.find(params[:id])
+  erb(:"realm/edit")
+end
+
+
+post '/realm/:id/edit' do
+  realm= Realm.new(params)
+  realm.update()
+  redirect '/realms'
+end
+
 post '/realms/:id/delete' do
   realm = Realm.find(params[:id])
   realm.delete
