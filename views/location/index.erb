@@ -3,10 +3,9 @@
 <table>
   <%@locations.each do |location| %>
   <p>location: <%=location.location_name%></p>
-
 </table>
 
 <form action="/locations/<%=location.id%>/delete" method="POST">
-        <input type="submit" value="delete" />
-      </form>
-      <% end %>
+  <input type="submit" value="delete" />
+</form>
+<% end %>

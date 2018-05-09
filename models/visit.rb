@@ -32,6 +32,14 @@ def self.all()
   return results.map { |visit| Visit.new( visit ) }
 end
 
+def delete()
+  sql = "DELETE FROM visits
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run( sql, values )
+end
+
+
 def self.delete_all()
   sql = "DELETE FROM visits"
   SqlRunner.run(sql)

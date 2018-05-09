@@ -33,3 +33,9 @@ post '/visits' do
   @realm.save
   redirect to("/visits")
 end
+
+post '/visits/:id/delete' do
+  visit = Visit.find(params[:id])
+  visit.delete
+  redirect to("/visits")
+end
