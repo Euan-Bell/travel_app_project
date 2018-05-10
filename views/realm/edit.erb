@@ -1,9 +1,12 @@
 <h1>CHANGED YOUR MIND?</h1>
 <h3>PLEASE ENTER THE NEW REALM YOU WISH TO VISIT.</h3>
 
+<div class="form">
 <form method="post" action="/realms/<%=@realm.id%>/edit">
+
   <label for="name">Name</label>
   <input type="text" name=realm_name id=realm_name value="<%=  @realm.realm_name %>">
   <input type="submit"  value="Edit Realm">
 
 </form>
+</div>

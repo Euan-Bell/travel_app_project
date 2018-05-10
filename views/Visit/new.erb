@@ -1,14 +1,17 @@
 
-<h1>Where will your Journey begin?</h1>
-<h3>please enter the starting point for your next journey.</h3>
-  <form method="post" action="/visits">
+<h1>WHERE WILL YOUR JOURNEY BEGIN?</h1>
+<h3>PLEASE ENTER STARTING POINT FOR YOUR NEXT JOURNEY.</h3>
 
+<div class="form">
+<form method="post" action="/visits">
 
-    <label for="location-selection">Select a Location:</label>
-    <select name="location_id" id="location_id">
-      <% for location in @locations  %>
-        <option value="<%=location.id%>"> <%= location.location_name %></option>
-      <% end %>
-    </select>
-    <input type="submit" value="add journey">
-  </form>
+  <label for="location-selection">Select a Location:</label>
+  <select name="location_id" id="location_id">
+    <% for location in @locations  %>
+    <option value="<%=location.id%>"> <%= location.location_name %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="add journey">
+
+</form>
+</div>
