@@ -36,13 +36,6 @@ post '/locations/:id/edit' do
 end
 
 
-# post '/locations' do
-#   @location = Location.new(params)
-#   binding.pry
-#   @location.save
-#   redirect to("/locations")
-# end
-
 post '/locations/:id/delete' do
   location = Location.find(params[:id])
   location.delete

@@ -1,0 +1,100 @@
+body {
+  background: black url('/images/background_image.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: 'Quicksand', sans-serif;,
+  padding: 0px;
+  margin: 0px;
+}
+
+
+nav {
+  font-size: 1.0em;
+  padding: 20px;
+  list-style: none;
+  background-color: #6E7783;
+
+  color: #6E7783;
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif,
+}
+
+h1 {
+  font-size: 2.0em;
+  color: #56445D;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-family: 'Skranji', cursive;,
+
+
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #548687;
+  padding: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  font-size: 1.0em;
+  color: #548687;
+  padding: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Quicksand', sans-serif;
+  color:#D8E6E7;
+  font-size: 1.0em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+.nav li {
+     display: inline-block;
+     margin-right: 8px;
+   }
+
+.nav a {
+  transition: .5s background-color;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav a:hover {
+     background-color: #005f5f;
+   }
+
+
+
+
+
+
+
+
+
+
+/* font-family: 'public/fonts/viking_elder_runes_bold.ttf';
+color: #D8E6E7;
+margin: 0px;
+padding: 0px;
+text-align: center; */
+}

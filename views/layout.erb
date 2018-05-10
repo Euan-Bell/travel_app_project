@@ -3,17 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Raiding the Realms</title>
+      <link href="https://fonts.googleapis.com/css?family=Quicksand|Skranji" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+      <link rel="stylesheet" type="text/css" href="/styles/forms.css">
   </head>
   <body>
-        <nav>
-          <a href="/locations/new">add new location</a>
-          <a href="/locations">View locations</a>
-          <a href="/realms/new">add new realm</a>
-          <a href="/realms">View realms</a>
-          <a href="/visits/new">add new journey</a>
-          <a href="/visits">View journeys</a>
 
-        </nav>
+
+    <div class="nav">
+      <ul>
+        <li class="add new realms"><a href="/realms/new">add new realm</a></li>
+        <li class="View realms"><a href="/realms">View Realms</a></li>
+        <li class="add new location"><a href="/locations/new">add new Location</a></li>
+        <li class="view location"><a href="/locations">View Locations</a></li>
+        <li class="add new Journey"><a href="/visits/new">add new journey</a></li>
+        <li class="add new Journey"><a href="/visits">View Journeys</a></li>
+      </ul>
+    </div>
+
+
       <%=yield%>
   </body>
 </html>

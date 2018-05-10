@@ -61,13 +61,6 @@ end
  end
 
 
-# def journeys()
-#     sql ="SELECT locations.*, realms.* FROM realms INNER JOIN locations ON realms.id = locations.realm_id INNER JOIN visits
-# ON locations.id = visits.locations_id;"
-    # values = [@id]
-    # location_hashes = SqlRunner.run(sql, values)
-    # locations = location_hashes.map {|location_hash| Visit.new(location_hash)}
-    # return locations
 
 
 
