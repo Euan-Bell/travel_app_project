@@ -42,7 +42,7 @@ h2 {
   font-family: 'Quicksand', sans-serif;
 }
 
-h2 {
+h3 {
   font-size: 1.0em;
   color: #548687;
   padding: 1px;
@@ -76,7 +76,7 @@ h2 {
 .nav a {
   transition: .5s background-color;
   text-decoration: none;
-  color: #fff;
+  color: #C5E99B;
 }
 
 .nav a:hover {
