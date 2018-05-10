@@ -5,7 +5,7 @@
 <div class="form">
 <form method="post" action="/visits">
 
-  <label for="location-selection">Select a Location:</label>
+  <label for="location-selection">SELECT YOUR STARTING LOCATION:</label>
   <select name="location_id" id="location_id">
     <% for location in @locations  %>
     <option value="<%=location.id%>"> <%= location.location_name %></option>

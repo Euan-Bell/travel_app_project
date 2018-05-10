@@ -17,7 +17,11 @@ form
 
 div.table {
     border-collapse: collapse;
-    background-color: #6E7783, 50%;
+    background-color: #444;
     font-family: 'Quicksand', sans-serif;
     color: #C5E99B;
+}
+div.href {
+  font-family: 'Quicksand', sans-serif;
+  color: #56445D;
 }

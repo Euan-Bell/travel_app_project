@@ -1,17 +1,18 @@
 <h1>JOURNEYS</h1>
 <h3>A VIEW OF WHERE YOUR JOURNEYS HAVE TAKEN YOU!</h3>
 
-<table>
-  <%@visits.each do |visit| %>
-  <p>Journey number: <%=visit.id%></p>
-  <p>Location: <%=visit.location.location_name%></p>
-  <p>Realm: <%= visit.location.realm.realm_name  %></p>
-</table>
+<div class="table">
+  <table>
+    <%@visits.each do |visit| %>
+    <p>JOURNEY NUMBER: <%=visit.id%></p>
+    <p>LOCATION: <%=visit.location.location_name%></p>
+    <p>REALM: <%= visit.location.realm.realm_name  %></p>
+  </table>
+
 
 <form action="/visits/<%=visit.id%>/delete" method="POST">
   <input type="submit" value="delete" />
 </form>
 
-
-
 <% end %>
+</div>
