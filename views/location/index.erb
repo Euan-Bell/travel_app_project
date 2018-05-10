@@ -1,9 +1,12 @@
 <h1>LOCATIONS</h1>
 
+
+<div class="table">
 <table>
   <%@locations.each do |location| %>
-  <p>location: <%=location.location_name%></p>
+  <p>lOCATION: <%=location.location_name%></p>
 </table>
+
 
 <p><a href="/locations/<%= location.id %>/edit">Edit Location</a></p>
 
@@ -11,5 +14,5 @@
   <input type="submit" value="delete" />
 </form>
 
-
 <% end %>
+</div>

@@ -5,8 +5,19 @@ div.form
 }
 form
 {
+    color: #56445D;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+
+div.table {
+    border-collapse: collapse;
+    background-color: #6E7783, 50%;
+    font-family: 'Quicksand', sans-serif;
+    color: #C5E99B;
 }

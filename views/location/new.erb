@@ -6,11 +6,11 @@
 <div class="form">
 
 <form method="post" action="/locations">
-  <label for="location-name">Select a Location:</label>
+  <label for="location-name">SELECT A LOCATION:</label>
   <input type=“text” name=location_name id=location_name>
 
 
-  <label> realm:
+  <label> REALM:
     <select name="realm_id" id="realm_id_select">
       <% for realm in @realms %>
       <option value=<%= realm.id %>><%= realm.realm_name %></option>
