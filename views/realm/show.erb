@@ -3,11 +3,12 @@
 <table>
 
   <% for realm in @realms %>
+  
   <tr>
     <td><a href="/realms/<%= realm.id %>"><%= realm.realm_name %></a></td>
     <td>|</td>
-
   </tr>
+
   <p><a href="/realms/<%=realm.id%>/update">update Location</a></p>
   <% end %>
 </table>
