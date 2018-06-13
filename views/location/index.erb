@@ -4,21 +4,20 @@
 
 
 <div class="table">
-<table>
-  <%@locations.each do |location| %>
-  <p>LOCATION: <%=location.location_name%></p>
-</table>
 
+  <table>
+    <%@locations.each do |location| %>
+    <p>LOCATION: <%=location.location_name%></p>
+  </table>
 
-<div class="href"
-<p><a href="/locations/<%= location.id %>/edit" style="text-decoration: none">EDIT LOCATION</a></p>
-</div>
+  <div class="href"
+    <p><a href="/locations/<%= location.id %>/edit" style="text-decoration: none">EDIT LOCATION</a></p>
+  </div>
 
+  <form action="/locations/<%=location.id%>/delete" method="POST">
+    <input type="submit" value="delete" />
+  </form>
 
-
-<form action="/locations/<%=location.id%>/delete" method="POST">
-  <input type="submit" value="delete" />
-</form>
-
-<% end %>
+  <% end %>
+  
 </div>
