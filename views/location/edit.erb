@@ -3,11 +3,11 @@
 <h3>PLEASE ENTER THE NEW LOCATION YOU WISH TO VISIT</h3>
 
 <div class="form">
-<form method="post" action="/locations/<%=@location.id%>/edit">
+  <form method="post" action="/locations/<%=@location.id%>/edit">
 
-  <label for="name">NAME</label>
-  <input type="text" name=location_name id=location_name value="<%=  @location.location_name %>">
-  <input type="submit"  value="Edit Location">
+    <label for="name">NAME</label>
+    <input type="text" name=location_name id=location_name value="<%=  @location.location_name %>">
+    <input type="submit"  value="Edit Location">
 
-</form>
+  </form>
 </div>
